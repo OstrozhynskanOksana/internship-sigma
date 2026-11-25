@@ -1,3 +1,5 @@
+package singletonedoublecheck;
+
 import java.math.BigDecimal;
 
 public class ReceiptPrinter {
