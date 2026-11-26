@@ -1,4 +1,4 @@
-package singletonedoublecheck;
+package singletongofdoublechecked;
 
 import java.math.BigDecimal;
 

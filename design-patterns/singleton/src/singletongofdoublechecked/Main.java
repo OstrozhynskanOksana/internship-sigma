@@ -1,9 +1,9 @@
-package singletonedoublecheck;
+package singletongofdoublechecked;
 
 import java.math.BigDecimal;
 
 public class Main {
-    public static void main(String[] args) {
+    static void main(String[] args) {
 
         PriceCalculator priceCalculator = new PriceCalculator();
         BigDecimal total = priceCalculator.calculateTotal(new BigDecimal("230"));
