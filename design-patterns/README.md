@@ -42,3 +42,16 @@ public Object getSingleton(String beanName) {
     return bean;
 }
 ```
+
+# FACTORY METHOD VS FACTORY VS ABSTRACT FACTORY
+## Factory Method vs Simple Factory
+
+1. **Fewer classes.** The first and most obvious point is that a simple factory has fewer classes compared to the factory method.
+
+2. **Changing the implementation.** With the factory method, to change the implementation we have to create a new, different object. With a simple factory, we just change the enum parameter that we pass.
+
+3. **What the client knows.** In the factory method, the client knows about the creator itself. In a simple factory, the client only knows about the factory and the parameters it passes. If tomorrow we change the creator, the client will have to be modified, so the change affects the client. With a simple factory, the changes affect only the factory itself.
+
+4. **Creation logic in one place.** In a simple factory, the creation logic is gathered in one class instead of being spread across several classes as in the factory method.
+
+5. **Adding a new type (the downside of a simple factory).** With a simple factory, adding a new type means modifying the factory itself (adding a new `case`), which violates the Open/Closed principle. With the factory method, we add a new creator subclass and don't touch the existing code.
