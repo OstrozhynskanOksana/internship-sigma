@@ -55,3 +55,13 @@ public Object getSingleton(String beanName) {
 4. **Creation logic in one place.** In a simple factory, the creation logic is gathered in one class instead of being spread across several classes as in the factory method.
 
 5. **Adding a new type (the downside of a simple factory).** With a simple factory, adding a new type means modifying the factory itself (adding a new `case`), which violates the Open/Closed principle. With the factory method, we add a new creator subclass and don't touch the existing code.
+
+# Factory Method vs Abstract Factory
+
+## Factory Method
+
+The code that uses a product knows only its interface, while the subclass of the creator decides which concrete product to create.
+
+## Abstract Factory
+
+The client receives a family of related products from a single factory, so the products are always compatible with each other. At the same time, the client knows only the interfaces of the factory and the products.
